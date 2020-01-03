@@ -11,6 +11,9 @@
     .loom{
         margin-top: 100px !important;
     }
+    #ues{
+        width: 80% !important;
+    }
     .boom1{
         display: flex !important;
         flex-direction: column-reverse !important;
