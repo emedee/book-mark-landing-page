@@ -13,6 +13,8 @@
     }
     #ues{
         width: 98% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     .boom1{
         display: flex !important;
