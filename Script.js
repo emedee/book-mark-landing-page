@@ -19,6 +19,8 @@ let closeIcon = document.querySelector('.ww2');
 let myDisplay = document.querySelector('.mydisp');
 let myDisplay1 = document.querySelector('.mydisp1');
 let myDisplay2 = document.querySelector('.mydisp2');
+let myArray = [firstAccordion, secondAccordion, thirdAccordion, fourthAccordion];
+let anotherArray = [whatIsBookmark, requestNewBrowser, isThereMobileApp, otherBrowsers];
 
 
 simpleBookmarking.addEventListener('click', function(){
@@ -45,34 +47,45 @@ easySharing.addEventListener('click', function(){
     myDisplay1.style.display = 'none';
     myDisplay2.style.display = 'block';
 })
-whatIsBookmark.addEventListener('click', function(){
-    if (firstAccordion.style.display === 'block') {
-        firstAccordion.style.display = 'none';
+// whatIsBookmark.addEventListener('click', function(){
+//     if (firstAccordion.style.display === 'block') {
+//         firstAccordion.style.display = 'none';
+//     } else {
+//         firstAccordion.style.display = 'block';
+//     }
+// })
+// requestNewBrowser.addEventListener('click', function(){
+//     if (secondAccordion.style.display === 'block') {
+//         secondAccordion.style.display = 'none';
+//     } else {
+//         secondAccordion.style.display = 'block';
+//     }
+// })
+// isThereMobileApp.addEventListener('click', function(){
+//     if (thirdAccordion.style.display === 'block') {
+//         thirdAccordion.style.display = 'none';
+//     } else {
+//         thirdAccordion.style.display = 'block';
+//     }
+// })
+// otherBrowsers.addEventListener('click', function(){
+//     if (fourthAccordion.style.display === 'block') {
+//         fourthAccordion.style.display = 'none';
+//     } else {
+//         fourthAccordion.style.display = 'block';
+//     }
+// })
+for (i = 0; i < anotherArray.length; i++)
+    anotherArray[i].addEventListener('click', function(){
+    this.classList.toggle('active');
+
+    myArray = this.nextElementSibling;
+    if(myArray.style.display === 'block'){
+        myArray.style.display = 'none'
     } else {
-        firstAccordion.style.display = 'block';
-    }
-})
-requestNewBrowser.addEventListener('click', function(){
-    if (secondAccordion.style.display === 'block') {
-        secondAccordion.style.display = 'none';
-    } else {
-        secondAccordion.style.display = 'block';
-    }
-})
-isThereMobileApp.addEventListener('click', function(){
-    if (thirdAccordion.style.display === 'block') {
-        thirdAccordion.style.display = 'none';
-    } else {
-        thirdAccordion.style.display = 'block';
-    }
-})
-otherBrowsers.addEventListener('click', function(){
-    if (fourthAccordion.style.display === 'block') {
-        fourthAccordion.style.display = 'none';
-    } else {
-        fourthAccordion.style.display = 'block';
-    }
-})
+        myArray.style.display = 'block'
+    }   
+    })
 hamburgerIcon.addEventListener('click', function(){
     hamburgerMenu.style.display = 'block';
     body.style.display = 'none';
