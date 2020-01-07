@@ -1,2 +1,2 @@
 # Book-mark-landing-page
-Created using HTML, CSS and JAVASCRIPT
+A simple webpage created using HTML, CSS and JAVASCRIPT
