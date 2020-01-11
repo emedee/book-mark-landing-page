@@ -21,7 +21,8 @@ let myDisplay1 = document.querySelector('.mydisp1');
 let myDisplay2 = document.querySelector('.mydisp2');
 let myArray = [firstAccordion, secondAccordion, thirdAccordion, fourthAccordion];
 let anotherArray = [whatIsBookmark, requestNewBrowser, isThereMobileApp, otherBrowsers];
-
+let inputField = document.querySelector('.email');
+let contactUs = document.querySelector('#send');
 
 simpleBookmarking.addEventListener('click', function(){
     firstTab.style.display = 'flex';
@@ -93,4 +94,11 @@ hamburgerIcon.addEventListener('click', function(){
 closeIcon.addEventListener('click', function(){
     hamburgerMenu.style.display = 'none';
     body.style.display = 'block';
+})
+contactUs.addEventListener('click', function(){
+    if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputField.value)){
+        alert('Your Email has been sent')
+    } else {
+        alert('Invalid Email!')
+    }``
 })
